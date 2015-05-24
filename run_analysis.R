@@ -25,7 +25,7 @@ names(train_set)[c(1,2)] <- c("subject","test.label")
 #Extracting needed data#
 
 Merged_set <- rbind(test_set,train_set)
-Merged_set <- Merged_set[,grepl("(subject)|(test.label)|(mean)|(std)",names(Merged_set))]
+Merged_set <- Merged_set[,grepl("(subject)|(test.label)|(mean\\(\\))|(std)",names(Merged_set))]
 names(Merged_set)<-gsub("^t", "Time", names(Merged_set))
 names(Merged_set)<-gsub("^f", "Frequency", names(Merged_set))
 names(Merged_set)<-gsub("Acc", "Accelerometer", names(Merged_set))
@@ -39,7 +39,7 @@ for(val in 1:nrow(Merged_set))
 #creating tidy data set with the average of each variable for each#
 #activity and each subject#
 
-Melted_data<-melt(Merged_set,id.vars = c("subject","test.label"),measure.vars = names(Merged_set)[3:81])
+Melted_data<-melt(Merged_set,id.vars = c("subject","test.label"),measure.vars = names(Merged_set)[3:68])
 Result<-dcast(Melted_data,subject ~ test.label,mean)
 
 #Save the new tidy data, Clear environment and console#
