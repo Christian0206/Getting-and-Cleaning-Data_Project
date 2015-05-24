@@ -35,6 +35,6 @@ a larger data set "Merged_set". Extracting the needed data can be done by the us
 command that will allow to select certain columns that contain certain strings (mean, std).
 Assigning descriptive variables names can be done by the use of "gsub" command which will allow the substitution
 of certain string by another. A for loop is used to change the number of the activity to the corresponding name.
-To achieve the 4th task the melt and dcast commands are used. Then result of the 4th task will be saved
+To achieve the 4th task the melt and "dcast" commands are used. Then result of the 4th task will be saved
 by using the "write.table" command. Finally the script will clean the unnecessary enviroment variable and it will
 clear the console.
