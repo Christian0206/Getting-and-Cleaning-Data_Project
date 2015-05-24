@@ -8,6 +8,8 @@ wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded acce
 The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for 
 generating the training data and 30% the test data. 
 
+## Details
+
 For each record it is provided:
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
@@ -16,7 +18,7 @@ For each record it is provided:
 - An identifier of the subject who carried out the experiment.
 
 The following labels are the descriptive names of the used variables.
-only the 79 needed variables plus the subject and the activity (test.label).
+only the 66 needed variables plus the subject and the activity (test.label).
 
 * "subject"
 * "test.label"
@@ -66,39 +68,26 @@ only the 79 needed variables plus the subject and the activity (test.label).
 * "FrequencyBodyAccelerometer-std()-X"
 * "FrequencyBodyAccelerometer-std()-Y"
 * "FrequencyBodyAccelerometer-std()-Z"
-* "FrequencyBodyAccelerometer-meanFreq()-X"
-* "FrequencyBodyAccelerometer-meanFreq()-Y"
-* "FrequencyBodyAccelerometer-meanFreq()-Z"
 * "FrequencyBodyAccelerometerJerk-mean()-X"
 * "FrequencyBodyAccelerometerJerk-mean()-Y"
 * "FrequencyBodyAccelerometerJerk-mean()-Z"
 * "FrequencyBodyAccelerometerJerk-std()-X"
 * "FrequencyBodyAccelerometerJerk-std()-Y"
 * "FrequencyBodyAccelerometerJerk-std()-Z"
-* "FrequencyBodyAccelerometerJerk-meanFreq()-X"
-* "FrequencyBodyAccelerometerJerk-meanFreq()-Y"
-* "FrequencyBodyAccelerometerJerk-meanFreq()-Z"
 * "FrequencyBodyGyroscope-mean()-X"
 * "FrequencyBodyGyroscope-mean()-Y"
 * "FrequencyBodyGyroscope-mean()-Z"
 * "FrequencyBodyGyroscope-std()-X"
 * "FrequencyBodyGyroscope-std()-Y"
 * "FrequencyBodyGyroscope-std()-Z"
-* "FrequencyBodyGyroscope-meanFreq()-X"
-* "FrequencyBodyGyroscope-meanFreq()-Y"
-* "FrequencyBodyGyroscope-meanFreq()-Z"
 * "FrequencyBodyAccelerometerMagnitude-mean()"
 * "FrequencyBodyAccelerometerMagnitude-std()"
-* "FrequencyBodyAccelerometerMagnitude-meanFreq()"
 * "FrequencyBodyAccelerometerJerkMagnitude-mean()"
 * "FrequencyBodyAccelerometerJerkMagnitude-std()"
-* "FrequencyBodyAccelerometerJerkMagnitude-meanFreq()"
 * "FrequencyBodyGyroscopeMagnitude-mean()"
 * "FrequencyBodyGyroscopeMagnitude-std()"
-* "FrequencyBodyGyroscopeMagnitude-meanFreq()"
 * "FrequencyBodyGyroscopeJerkMagnitude-mean()"
 * "FrequencyBodyGyroscopeJerkMagnitude-std()"
-* "FrequencyBodyGyroscopeJerkMagnitude-meanFreq()"
 
 the following fuctions are used to calculate the variables valuse: 
 
@@ -118,7 +107,12 @@ the following fuctions are used to calculate the variables valuse:
 * skewness(): skewness of the frequency domain signal 
 * kurtosis(): kurtosis of the frequency domain signal 
 * bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-* angle(): Angle between to vectors.
+* angle(): Angle between vectors.
+
+## Note
+
+The averages of the means and standard deviations for each activity for each individual test subject
+is saved in the "New_Tidy_Data.txt" file in the working directory.
 
 ## Source
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
