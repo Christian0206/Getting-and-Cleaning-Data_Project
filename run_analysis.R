@@ -1,5 +1,5 @@
-##library(reshape2)
-##library(dplyr)
+library(reshape2)
+library(dplyr)
 features<-read.table("features.txt")
 activity<-read.table("activity_labels.txt")
 
