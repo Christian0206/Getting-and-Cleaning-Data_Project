@@ -40,7 +40,7 @@ for(val in 1:nrow(Merged_set))
 #activity and each subject#
 
 Melted_data<-melt(Merged_set,id.vars = c("subject","test.label"),measure.vars = names(Merged_set)[3:68])
-Result<-dcast(Melted_data,subject ~ test.label,mean)
+Result<-dcast(Melted_data,variable ~ subject + test,mean)
 
 #Save the new tidy data, Clear environment and console#
 
